@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500&display=swap');
+
+$h1-size: 64px;
+$h2-size: 32px;
+$p-size: 16px;
+$button-text-size: 16px;
+$hamburger-size: 32px;
+$card-header-icon-size: 44px;
+
+$header-background-image: url(../img/background.jpg);
+$contact-background-image: url(../img/contact-background.jpg);
+
+$offer-home-background: url(../img/offer/home.jpg);
+$offer-apartment-background: url(../img/offer/apartment.jpg);
+$offer-life-background: url(../img/offer/life.jpg);
+$offer-car-background: url(../img/offer/car.jpg);
+$offer-tourist-background: url(../img/offer/tourist.jpg);
+$offer-medic-background: url(../img/offer/medic.jpg);
+$offer-senior-background: url(../img/offer/senior.jpg);
+$offer-invest-background: url(../img/offer/invest.jpg);
+$offer-work-background: url(../img/offer/work.jpg);
+
+$logo-max-width: 130px;
+$logo-max-height: 70px;
+
+$black: rgb(0, 0, 0);
+$light-black: rgb(47, 48, 47);
+$white: rgb(255, 255, 255);
+$grey: rgb(216, 220, 219);
+$light-grey: rgb(245, 245, 245);
+$dark-blue: rgb(3, 37, 76);
+$blue: rgb(24, 123, 205);
+$light-blue: rgb(42, 157, 244);
+
+$padding-container: 0 10% 0 10%;
+$padding-container-small: 0 5% 0 5%;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 {
+    font-size: $h2-size;
+    font-weight: 400;
+}
+
+p {
+    font-size: $p-size;
+}
+
+
+/*==============NAVIGATION==============*/
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    z-index: 999;
+    padding: $padding-container;
+
+    ul {
+        transition: all 0.2s linear
+    }
+
+    ul li {
+        display: inline-block;
+        margin-left: 30px;
+        font-size: 1.1rem;
+    }
+
+    ul li a {
+        color: #000;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+.nav__logo {
+    height: 60px;
+    width: auto;
+}
+
+.btn {
+    display: none;
+}
+
+.navigation--active {
+    transform: translateY(100px);
+}
+
+
+/*==============HEADER==============*/
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: $header-background-image;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: $padding-container;
+}
+
+.header__content h1 {
+    font-size: $h1-size;
+    padding-bottom: 50px;
+    text-shadow: 0px 0px 15px rgba(66, 68, 90, 1);
+    color: $white;
+}
+
+.header__content button {
+    border: none;
+    background-color: $white;
+    color: $blue;
+    padding: 15px 50px;
+    border-radius: 5px;
+    font-size: $button-text-size;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}
+
+
+/*==============PARTNERS CONTAINER==============*/
+.partnersContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    min-height: 50vh;
+    text-align: center;
+    padding: 100px 0;
+
+    p {
+        color: $light-blue;
+    }
+
+    h2 {
+        color: rgb(67, 67, 67);
+        padding-top: 25px;
+        padding-bottom: 75px;
+    }
+}
+
+.logoContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($logo-max-width * 1.25, 1fr));
+    grid-auto-rows: $logo-max-height * 1.25;
+    grid-gap: 4rem;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $light-grey;
+        border-radius: 10px;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.2);
+            border: none;
+            -webkit-box-shadow: 0px 0px 32px -10px $grey;
+            -moz-box-shadow: 0px 0px 32px -10px $grey;
+            box-shadow: 0px 0px 32px -10px $grey;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        max-width: $logo-max-width;
+        max-height: $logo-max-height;
+        filter: grayscale(100%) contrast(25%);
+        transition: filter .3s ease;
+
+        &:hover {
+            filter: grayscale(0) contrast(100%);
+        }
+    }
+}
+
+
+/*==============OFFER CONTAINER==============*/
+.offerContainer {
+    background-color: $light-grey;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    p {
+        color: $light-blue;
+    }
+
+    h2 {
+        color: rgb(67, 67, 67);
+        margin-top: 25px;
+    }
+}
+
+.cardContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-gap: 50px;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $light-grey;
+        border-radius: 10px;
+        transition: all .2s;
+    }
+}
+
+.card {
+    width: 100%;
+    background-color: $white;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__header {
+        padding-top: 50px;
+        font-size: $card-header-icon-size;
+
+        .uil {
+            color: $white;
+        }
+    }
+
+    &__body p {
+        padding-top: 25px;
+        padding-bottom: 50px;
+        color: $white  !important;
+    }
+}
+
+.homeBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-home-background;
+}
+
+.apartmentBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-apartment-background;
+}
+
+.lifeBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-life-background;
+}
+
+.carBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-car-background;
+}
+
+.touristBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-tourist-background;
+}
+
+.medicBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-medic-background;
+}
+
+.seniorBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-senior-background;
+}
+
+.investBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-invest-background;
+}
+
+.workBackground {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $offer-apartment-background;
+}
+
+
+/*==============CONTACT CONTAINER==============*/
+.contactContainer {
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 100%, rgba(0, 0, 0, .3) 100%), $contact-background-image;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+
+    h2 {
+        padding-top: 50px;
+    }
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 50px;
+    color: $white;
+}
+
+
+/*==============FOOTER==============*/
+footer {
+    width: 100%;
+    font-weight: 400;
+    padding: $padding-container;
+    background-color: $dark-blue;
+    padding: 50px 0;
+}
+
+.footerContent {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    color: $white;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    li:last-child,
+    li:nth-last-child(2) {
+        font-size: calc($p-size / 1.5);
+    }
+
+    img {
+        height: 80px;
+        width: auto;
+        padding-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+
+/*==============MEDIA==============*/
+@media screen and (max-width: 2000px) {
+
+    nav,
+    header {
+        padding: $padding-container;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    nav,
+    header {
+        padding: $padding-container;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    nav {
+        padding: $padding-container-small;
+        border-bottom: 1px solid $grey;
+
+        ul {
+            position: absolute;
+            height: 100px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            background-color: $white;
+            transform: translateY(-200px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            i {
+                font-size: $hamburger-size;
+            }
+        }
+    }
+
+    header {
+        padding: 0;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__content {
+        h1 {
+            font-size: calc($h1-size / 1.5);
+        }
+    }
+
+    .logoGrid {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="javascript/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <nav class="navigation">
+        <img src="img/ovb_logo.svg" alt="Logo OVB" class="nav__logo">
+        <ul class="nav__options">
+            <li>
+                <a href="#start">Start</a>
+            </li>
+            <li>
+                <a href="#partners">Partnerzy</a>
+            </li>
+            <li>
+                <a href="#offer">Oferta</a>
+            </li>
+            <li>
+                <a href="#contact">Kontakt</a>
+            </li>
+        </ul>
+        <button class="btn" id="navBtn">
+            <i class="uil uil-bars"></i>
+        </button>
+    </nav>
+    <header id="start">
+        <div class="header__content">
+            <h1>Indywidualne rozwiązania? <br> Mamy takie!</h1>
+            <a href="#offer">
+                <button>Sprawdź!</button>
+            </a>
+        </div>
+    </header>
+    <section class="partnersContainer" id="partners">
+        <p>Partnerzy</p>
+        <h2>Poznaj naszych partnerów</h2>
+        <div class="logoContainer">
+            <ul class="logoGrid">
+                <li class="logoGrid__item">
+                    <img src="img/partners/allianz.png" class="logoGrid__img" alt="Coca Cola">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/compensa.png" class="logoGrid__img" alt="Google">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/ergo_hestia.png" class="logoGrid__img" alt="AirBnB">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/generali.png" class="logoGrid__img" alt="Spotify">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/hdi.png" class="logoGrid__img" alt="Guinness">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/metlife.png" class="logoGrid__img" alt="Audi">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/mtu.png" class="logoGrid__img" alt="Nike">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/nationale_nederlanden.png" class="logoGrid__img" alt="Netflix">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/proama.png" class="logoGrid__img" alt="Coca Cola">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/prudential.png" class="logoGrid__img" alt="Google">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/signal_iduna.png" class="logoGrid__img" alt="AirBnB">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/uniqa.png" class="logoGrid__img" alt="Spotify">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/warta.png" class="logoGrid__img" alt="Guinness">
+                </li>
+                <li class="logoGrid__item">
+                    <img src="img/partners/wiener.png" class="logoGrid__img" alt="Audi">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="offerContainer" id="offer">
+        <p>Nasza oferta</p>
+        <h2>Potrzebujesz ubezpieczenia? Sprawdź co możemy Ci zaoferować</h2>
+        <div class="cardContainer">
+            <ul class="cardGrid">
+                <!-- 1 -->
+                <li class="cardsGrid__item">
+                    <div class="card homeBackground">
+                        <div class="card__header">
+                            <i class="uil uil-house-user"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Ubezpieczenie na dom</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="cardsGrid__item">
+                    <div class="card apartmentBackground">
+                        <div class="card__header">
+                            <i class="uil uil-estate"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Ubezpieczenie na mieszkanie</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="cardsGrid__item">
+                    <div class="card lifeBackground">
+                        <div class="card__header">
+                            <i class="uil uil-heart"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Ubezpieczenie na życie</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="cardsGrid__item">
+                    <div class="card carBackground">
+                        <div class="card__header">
+                            <i class="uil uil-car-sideview"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Ubezpieczenie na OC/AC</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="cardsGrid__item">
+                    <div class="card touristBackground">
+                        <div class="card__header">
+                            <i class="uil uil-backpack"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Ubezpieczenie turystyczne</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="cardsGrid__item">
+                    <div class="card medicBackground">
+                        <div class="card__header">
+                            <i class="uil uil-hospital"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Abonamenty medyczne</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="cardsGrid__item">
+                    <div class="card seniorBackground">
+                        <div class="card__header">
+                            <i class="uil uil-smile"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Fundusze emerytalne</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="cardsGrid__item">
+                    <div class="card investBackground">
+                        <div class="card__header">
+                            <i class="uil uil-usd-circle"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Fundusze inwestycyjne</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="cardsGrid__item">
+                    <div class="card workBackground">
+                        <div class="card__header">
+                            <i class="uil uil-bag"></i>
+                        </div>
+                        <div class="card__body">
+                            <p>Oferty pracy</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="contactContainer" id="contact">
+        <div class="contactContent">
+            <p>kontakt</p>
+            <h2>Masz nadal jakieś pytania? <br> odezwij się do nas!</h2>
+            <div class="contactGrid">
+                <div class="phone">
+                    <p>+48 507 949 889</p>
+                </div>
+                <div class="email">
+                    <p>szymon.mokrycki@ovb.com.pl</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footerContent">
+            <ul>
+                <li>
+                    <img src="img/ovb_logo_white.svg" alt="">
+                </li>
+                <li>
+                    <a href="#start">Start</a>
+                </li>
+                <li>
+                    <a href="#partners">Partnerzy</a>
+                </li>
+                <li>
+                    <a href="#offer">Oferta</a>
+                </li>
+                <li>
+                    <a href="#contact">Kontakt</a>
+                </li>
+                <li>OVB Wschowa 2022</li>
+                <li>
+                    <a href="https://sebly.netlify.app">Created by Sebastian Szwankowski</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
